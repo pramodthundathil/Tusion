@@ -1,0 +1,45 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .content {
+        width: 90%;
+        padding: 20px;
+        margin: auto;
+        border-radius: 10px;
+        border: .5px solid white;
+
+        background: white;
+    }
+
+    .content h1 {
+        border-bottom: .5px solid gray;
+    }
+</style>
+
+<div class="container mt-5 mb-5">
+    <div class="content">
+        <h1 class="text-center">Exam Roules</h1>
+        <p class="card-text">
+        </p>
+        <ul style="list-style:decimal;">
+            <li>All questions are MCQ (multiple choice question)</li>
+            <li><span class="text-danger">Only one choice is correct among the given.</span></li>
+            <li>Every question carry different marks.</li>
+            <li>Try to answer ASAP.</li>
+            <li>If you PRESS refresh or go back to the previous page, there will be a new question for you and the
+                question you were on will be counted as number of attempts.</li>
+            <li>Questions are presented randomly.</li>
+            <li>You can view marks once after approving marklist by teacher.</li>
+        </ul>
+        <p></p>
+        <a href="{%url 'EneterExamination' exam.id %}" class="btn btn-success" style="border-radius:0px;">Enter
+            Examination</a><br>
+    <div class="card-footer">Best Of Luck, Students!</div>
+
+    </div>
+
+</div>
+</div>
+
+{% endblock %}

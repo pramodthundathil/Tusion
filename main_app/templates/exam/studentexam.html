@@ -1,0 +1,40 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .content{
+        width:90%;
+        padding: 20px;
+        margin: auto;
+        border-radius: 10px;
+        border: .5px solid white;
+        
+        background: white;
+    }
+    .content h1{
+        border-bottom: .5px solid gray;
+    }
+</style>
+
+<div class="container mt-5 mb-5">
+    <div class="content">
+    <h3>Available Exams</h3>
+    <table class="table table-info table-borderless mt-3 mb-3">
+    {% for i in exam%}
+        
+        <tr>
+            <th>Exam Name: <span class="text-primary">{{i}}</span> </th>
+            <th>Expry Time: <span class="text-primary">{{i.expery}}</span> </th>
+            <th><a href="{%url 'AttendtheExam' i.id %}" class="btn btn-dark">Attend</a></th>
+        </tr>
+        <tr >
+<td colspan="3" class="bg-white"></td>
+        </tr>
+    {% endfor %}
+
+       
+    </table>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+{% block content%}
+<style>
+    .containerc{
+        background-color: darkblue;
+    }
+    .content{
+        /* background-color: none; */
+        background-color: white;
+    }
+    .content .items{
+        padding: 20px;
+    }
+    .modal input, select{
+        padding: 6px;
+        width: 100%;
+        border-radius: 6px;
+        border: .5px solid gray;
+    }
+    .content1{
+        padding: 20px;
+        border-radius: 10px;
+    }
+</style>
+
+<div class="container containerc mt-5 mb-4">
+    <div class="content">
+    <h3 class="text-center text-success">Exam Completed Wait For Result <a href="{%url 'student_home' %}">Go Home</a></h3>
+    
+
+    <div>
+</div>
+{% endblock %}
